@@ -8,14 +8,14 @@ function App() {
   useEffect(() => {
     console.log(lp, "lp");
     const {initData} = lp;
-    const { hash, startParam } = initData;
+    const { startParam } = initData;
     if(startParam && typeof startParam === 'string'){
       const source = startParam.replaceAll('__','%');
       const dappUrl = decodeURIComponent(source);
       console.log(dappUrl,'dappUrl');
       console.log(hash,'hash');
       // if(dappUrl.startsWith("https://") ){
-      //   window.location.href = `${dappUrl}#${hash}`;
+      //   window.location.href = `${dappUrl}${location.hash}`;
       // }
     }
   }, [lp]);
