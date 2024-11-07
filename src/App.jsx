@@ -8,8 +8,9 @@ function App() {
   useEffect(() => {
     console.log(lp, "lp");
     const { hash, tgWebAppStartParam } = lp;
-    if (tgWebAppStartParam && tgWebAppStartParam.startWith("https://")) {
-      window.location.href = `${tgWebAppStartParam}${hash}`;
+    if(tgWebAppStartParam && typeof tgWebAppStartParam === 'string'){
+      const dappUrl = decodeURIComponent(tgWebAppStartParam);
+      tgWebAppStartParam.startWith("https://") &&  window.location.href = `${tgWebAppStartParam}${hash}`;
     }
   }, [lp]);
   return <div />;
