@@ -7,10 +7,12 @@ function App() {
 
   useEffect(() => {
     console.log(lp, "lp");
-    const { hash, tgWebAppStartParam } = lp;
-    if(tgWebAppStartParam && typeof tgWebAppStartParam === 'string'){
-      const dappUrl = decodeURIComponent(tgWebAppStartParam);
-      tgWebAppStartParam.startWith("https://") &&  window.location.href = `${tgWebAppStartParam}${hash}`;
+    const {initData} = lp;
+    const { hash, startParam } = initData;
+    if(startParam && typeof startParam === 'string'){
+      const source = startParam.replace('__','%');
+      const dappUrl = decodeURIComponent(startParam);
+      startParam.startWith("https://") &&  window.location.href = `${startParam}${hash}`;
     }
   }, [lp]);
   return <div />;
