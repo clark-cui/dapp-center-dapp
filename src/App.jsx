@@ -10,7 +10,7 @@ function App() {
     const {initData} = lp;
     const { hash, startParam } = initData;
     if(startParam && typeof startParam === 'string'){
-      const source = startParam.replace('__','%');
+      const source = startParam.replaceAll('__','%');
       const dappUrl = decodeURIComponent(startParam);
       startParam.startWith("https://") &&  window.location.href = `${startParam}${hash}`;
     }
