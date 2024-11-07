@@ -13,7 +13,8 @@ function App() {
       const source = startParam.replaceAll('__','%');
       const dappUrl = decodeURIComponent(startParam);
       console.log(dappUrl,'dappUrl');
-      startParam.startWith("https://") &&  window.location.href = `${dappUrl}${hash}`;
+      console.log(hash,'hash');
+      dappUrl.startWith("https://") &&  window.location.href = `${dappUrl}${hash}`;
     }
   }, [lp]);
   return <div />;
