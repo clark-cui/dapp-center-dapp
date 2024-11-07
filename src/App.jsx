@@ -7,6 +7,10 @@ function App() {
 
   useEffect(() => {
     console.log(lp, "lp");
+    const { hash, tgWebAppStartParam } = lp;
+    if (tgWebAppStartParam && tgWebAppStartParam.startWith("https://")) {
+      window.location.href = `${tgWebAppStartParam}${hash}`;
+    }
   }, [lp]);
   return <div />;
 }
