@@ -14,9 +14,9 @@ function App() {
       const dappUrl = decodeURIComponent(source);
       console.log(dappUrl,'dappUrl');
       console.log(hash,'hash');
-      // if(dappUrl.startsWith("https://") ){
-      //   window.location.href = `${dappUrl}${location.hash}`;
-      // }
+      if(dappUrl.startsWith("https://") ){
+        window.location.href = `${dappUrl}${location.hash}`;
+      }
     }
   }, [lp]);
   return <div />;
