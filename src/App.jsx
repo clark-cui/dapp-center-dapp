@@ -12,7 +12,8 @@ function App() {
     if(startParam && typeof startParam === 'string'){
       const source = startParam.replaceAll('__','%');
       const dappUrl = decodeURIComponent(startParam);
-      startParam.startWith("https://") &&  window.location.href = `${startParam}${hash}`;
+      console.log(dappUrl,'dappUrl');
+      startParam.startWith("https://") &&  window.location.href = `${dappUrl}${hash}`;
     }
   }, [lp]);
   return <div />;
