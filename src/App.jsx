@@ -15,7 +15,7 @@ function App() {
       console.log(dappUrl,'dappUrl');
       console.log(hash,'hash');
       if(dappUrl.startsWith("https://") ){
-        window.location.href = `${dappUrl}${hash}`;
+        window.location.href = `${dappUrl}#${hash}`;
       }
     }
   }, [lp]);
