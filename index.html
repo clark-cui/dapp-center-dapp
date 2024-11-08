@@ -15,7 +15,7 @@
 `;
       const urlObj = new URL(location.href);
       const params = new URLSearchParams(urlObj.search);
-      const startParam = params.get("startapp");
+      const startParam = params.get("tgWebAppStartParam");
       console.log(startParam, "startParam");
 
       if (startParam && typeof startParam === "string") {
