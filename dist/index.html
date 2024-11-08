@@ -1,12 +1,1 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dapp</title>
-    <script type="module" crossorigin>(function(){const r=document.createElement("link").relList;if(r&&r.supports&&r.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))c(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const o of t.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&c(o)}).observe(document,{childList:!0,subtree:!0});function i(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function c(e){if(e.ep)return;e.ep=!0;const t=i(e);fetch(e.href,t)}})();const a=new URL(location.href),l=new URLSearchParams(a.search),s=l.get("tgWebAppStartParam");if(s&&typeof s=="string"){const n=s.replaceAll("__","%"),r=decodeURIComponent(n);r.startsWith("https://")&&(location.href=`${r}${location.hash}`)}</script>
-  </head>
-  <body>
-    <div id="app"></div>
-  </body>
-</html>
+<!DOCTYPE html><html lang="en"><head><title>DApp</title></head><body><script>const t=new URL(location.href),e=new URLSearchParams(t.search).get("tgWebAppStartParam");if(e&&"string"==typeof e){const t=e.replaceAll("__","%"),a=decodeURIComponent(t);a.startsWith("https://")&&(location.href=`${a}${location.hash}`)}</script></body></html>
