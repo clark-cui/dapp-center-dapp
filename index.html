@@ -9,10 +9,6 @@
   <body>
     <div id="app"></div>
     <script type="module">
-      document.querySelector("#app").innerHTML = `
-  <div>
-  </div>
-`;
       const urlObj = new URL(location.href);
       const params = new URLSearchParams(urlObj.search);
       const startParam = params.get("tgWebAppStartParam");
